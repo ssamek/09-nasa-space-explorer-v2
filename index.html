@@ -14,8 +14,14 @@
     </header>
 
     <div class="filters">
-      <button id="getImageBtn">Fetch Space Images</button>
+      <button id="getImageBtn">Get Space Images</button>
     </div>
+
+    <!-- Did You Know: random fact shown on each load -->
+    <section id="didYouKnow" class="did-you-know" aria-live="polite">
+      <h2>Did you know?</h2>
+      <p id="didYouKnowText">Loading a fun space fact…</p>
+    </section>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
@@ -23,6 +29,18 @@
         <p>Click "Fetch Space Images" to explore the cosmos!</p>
       </div>
     </div>
+
+      <!-- Modal for image details -->
+      <div id="lightboxModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content" role="document">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div id="modalMedia" class="modal-media"></div>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDate" class="modal-date"></p>
+          <p id="modalExplanation" class="modal-explanation"></p>
+        </div>
+      </div>
   </div>
 
   <script src="js/script.js"></script>
